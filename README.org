@@ -1,0 +1,29 @@
+#+HTML: <p align="center"><img src="./images/preview.png" /></p>
+* Description
+  This Project was carried out for educational purpose, it's main objective is to implement a problem solving algorithm in the game /Jeu De Taquin/. Two heuristics were chosen in order to find the optimal solution:
+  - Non Similar Boxes :: For each cell of the matrix that doesn't match with the final matrix the cost is incremented by 1, but actually it's incremented by 2 because a cell doesn't match it's final cell implies that another cell doesn't match too since the game is about swapping cells.
+  - Euclidian Distance :: For each cell /A/ we calculate the euclidian distance from that cell to the cell /B/ containing the digit that should be in the final matrix in cell /A/. When the digit is in the right cell the distance is equal to 0.
+* Building
+  Open =main.pde= as a [[https://processing.org/][Processing]] sketch, install =G4P= library and run the sketch.
+* Controls
+** PLAY mode
+   These controls are used for swapping the empty cell with other cells.
+|---------+------------------------------------------|
+| Button  | Action                                   |
+|---------+------------------------------------------|
+| =UP=    | Swap the empty cell with the upper cell  |
+| =DOWN=  | Swap the empty cell with the bottom cell |
+| =RIGHT= | Swap the empty cell with the right cell  |
+| =LEFT=  | Swap the empty cell with the left cell   |
+** AUTO 1 and AUTO 2 modes
+   These controls are used to explore the steps of the solution when it is found.
+|---------+---------------------------|
+| Button  | Action                    |
+|---------+---------------------------|
+| =RIGHT= | Move to the next step     |
+| =LEFT=  | Move to the previous step |
+** EDIT 1 and EDIT 2 modes
+|----------------------+---------------------------------------------------------------|
+| Button               | Action                                                        |
+|----------------------+---------------------------------------------------------------|
+| =Right mouse button= | Swaps between the two cells which where clicked consecutively |
